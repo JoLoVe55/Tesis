@@ -1,0 +1,53 @@
+while ($row1 = $resulta->fetch_assoc()) { ?>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover my-4 py-2">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="5"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Ref de Factura: <?php echo $row1['id_venta']; ?></th>
+                                                    <th><?php echo $row1['fecha']; ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Id de Usuario: <?php echo $row1['id_usuario']; ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Comprobante de Pago N°: <?php echo $row1['referencia']; ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Telf: <?php echo $row1['telefono']; ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Id de Producto</th>
+                                                    <th>Cantidad</th>
+                                                    <th>Precio Unitario</th>
+                                                    <th>Precio Final</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php
+                                                $registross = "SELECT * FROM detalle WHERE id_venta = '" . $row1['id_venta'] . "'";
+                                                $resultaa = $conexion->query($registross);
+                                                $totalsub = 0;
+                                                while ($row2 = $resultaa->fetch_assoc()) {
+                                                    $pagar = $row1['total'];
+                                                    $subtotal = $row2['precio_unit'];
+                                                ?>
+                                                    <tr>
+                                                        <td><?php echo $row2['id_producto']; ?></td>
+                                                        <td><?php echo $row2['cantidad']; ?></td>
+                                                        <td class="text-end">$<?php echo $row2['precio_unit']; ?></td>
+                                                        <td class="text-end" colspan="2">$<?php echo $row2['subtotal']; ?></td>
+                                                    </tr>
+                                                <?php
+                                                    $totalsub += $subtotal;
+                                                } ?>
+                                                <tr>
+                                                    <td class="text-end" colspan="3">Subtotal: $<?php echo $totalsub; ?></td>
+                                                    <td class="text-end" colspan="2">Total: $<?php echo $pagar; ?></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                <?php } ?>

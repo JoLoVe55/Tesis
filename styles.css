@@ -1,0 +1,195 @@
+/* Fondo */
+body{
+    background-color: rgb(255, 255, 255); 
+    margin: 0;
+  padding: 0;
+}
+
+
+/* Barra de Navegacion*/
+
+.navbar{
+    padding: 2rem;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between; 
+}
+
+@media screen and (max-width: 600px){
+    .navbar-brand{
+        display: none;
+    }
+}
+
+/* Carrusel*/
+.carousel-inner img{
+    width: 80%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+.carousel-control-prev{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+}
+.carousel-control-next{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+/*Separacion*/
+.separacion{
+    background-color: rgb(177, 75, 123);
+    margin-bottom: 10px;
+}
+.espacio{
+    letter-spacing: 3px;
+}
+.parr-peq{
+    width: 600px;
+    margin: auto;
+}
+    
+/* Cartas*/
+
+.card {
+    float: right;
+    margin: 10px;
+    
+ 
+}
+
+
+
+#card:hover #card-body {
+    bottom: 0;
+  }
+  
+  #card-body {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    transition: bottom 0.3s ease-in-out;
+  }
+
+
+
+#card {
+    height: 300px; /* Establece la altura de la card */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  }
+  
+  #cardimg {
+    height: 100%; /* Establece la altura de la imagen al 100% */
+     /* Establece el ancho de la imagen al 100% */
+    object-fit: cover; /* Escala la imagen para que cubra todo el contenedor */
+  }
+.card-body{
+    box-shadow: 2px 2px 10px rgb(71, 71, 71);
+}
+
+/*mostrar*/
+
+
+.font-mistral {
+    font-family: 'Mistral', cursive;
+  }
+
+  
+  
+  
+  
+  
+  
+
+/* Footer */
+
+    
+footer{
+    background-color:rgb(0, 0, 0);
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 10px;
+    bottom= 0;
+    
+}
+
+
+/*registrado*/
+#my-image:hover {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-10px, 0); }
+    20% { transform: translate(10px, 0); }
+    30% { transform: translate(-10px, 0); }
+    40% { transform: translate(10px, 0); }
+    50% { transform: translate(-10px, 0); }
+    60% { transform: translate(10px, 0); }
+    70% { transform: translate(-10px, 0); }
+    80% { transform: translate(10px, 0); }
+    90% { transform: translate(-10px, 0); }
+    100% { transform: translate(0, 0); }
+  }
+
+  #lk{
+width: 100%;
+  }
+
+  
+  #titulo {
+    background-color: rgb(0, 0, 0);
+    color: rgb(250, 250, 250);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+  #titulo h1 {
+    font-family: 'Helvetica Neue', sans-serif; /* Aquí puedes agregar el nombre de la fuente que desees */
+    
+   
+    
+    font-weight: bold;
+  }
+  .btn-menu {
+    width: 100%;
+    padding:2px;
+    
+  }
+ 
+  @keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.parpadeo {
+    animation-name: parpadeo;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+  
